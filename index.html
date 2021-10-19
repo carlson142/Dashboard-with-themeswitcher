@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script defer src="script.js"></script>
+
+    <title>Frontend Mentor | Social media dashboard with themeswitcher</title>
+  </head>
+  <body>
+    <main>
+      <!--TOP PART OF PAGE-->
+      <div class="top">
+        <div class="top__info">
+          <h1 class="top__info--heading">Social Media Dashboard</h1>
+          <p class="top__info--text">Total Followers: 23,004</p>
+        </div>
+
+        <!--TOGGLE BUTTON-->
+        <div class="top__btn">
+          <span class="top__btn--name">Dark Mode</span>
+          <input
+            type="checkbox"
+            id="inputToggle"
+            name="toggle"
+            class="top__btn--input"
+          />
+          <label for="inputToggle" class="top__btn--label" id="labelToggle">
+            <span class="top__btn--toggle"></span>
+          </label>
+        </div>
+      </div>
+
+      <!--COMPONENT 1-->
+      <div class="component1">
+        <!--CARD 1-->
+        <div class="component1__card card_1">
+          <!--SOCIALS-->
+          <div class="component1__card--socials">
+            <img src="img/icon-facebook.svg" alt="fb" />
+            <span class="nickname">@nathanf</span>
+          </div>
+
+          <!--FOLLOWERS-->
+          <div class="component1__card--followers">
+            <span class="number">1987</span>
+            <span class="word">Followers</span>
+          </div>
+
+          <!--TODAY-->
+          <div class="component1__card--today">
+            <img src="img/icon-up.svg" alt="up" />
+            <span class="today">12 Today</span>
+          </div>
+        </div>
+
+        <!--CARD 2-->
+        <div class="component1__card card_2">
+          <!--SOCIALS-->
+          <div class="component1__card--socials">
+            <img src="img/icon-twitter.svg" alt="tw" />
+            <span class="nickname">@nathanf</span>
+          </div>
+
+          <!--FOLLOWERS-->
+          <div class="component1__card--followers">
+            <span class="number">1044</span>
+            <span class="word">Followers</span>
+          </div>
+
+          <!--TODAY-->
+          <div class="component1__card--today">
+            <img src="img/icon-up.svg" alt="up" />
+            <span class="today">99 Today</span>
+          </div>
+        </div>
+
+        <!--CARD 3-->
+        <div class="component1__card card_3">
+          <!--SOCIALS-->
+          <div class="component1__card--socials">
+            <img src="img/icon-instagram.svg" alt="ig" />
+            <span class="nickname">@realnathanf</span>
+          </div>
+
+          <!--FOLLOWERS-->
+          <div class="component1__card--followers">
+            <span class="number">11k</span>
+            <span class="word">Followers</span>
+          </div>
+
+          <!--TODAY-->
+          <div class="component1__card--today">
+            <img src="img/icon-up.svg" alt="up" />
+            <span class="today">1099 Today</span>
+          </div>
+        </div>
+
+        <!--CARD 4-->
+        <div class="component1__card card_4">
+          <!--SOCIALS-->
+          <div class="component1__card--socials">
+            <img src="img/icon-youtube.svg" alt="yt" />
+            <span class="nickname">Nathan F.</span>
+          </div>
+
+          <!--FOLLOWERS-->
+          <div class="component1__card--followers">
+            <span class="number">8239</span>
+            <span class="word">Subscribers</span>
+          </div>
+
+          <!--TODAY-->
+          <div class="component1__card--today">
+            <img src="img/icon-down.svg" alt="down" />
+            <span class="today" style="color: var(--color-primary-bright-red)"
+              >144 Today</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <!--HEADING-->
+      <div class="middle">
+        <h2 class="middle__heading">Overview - Today</h2>
+      </div>
+
+      <!--COMPONENT 2-->
+      <div class="component2">
+        <!--CARD 1-->
+        <div class="component2__card card-1">
+          <!--TOP PART-->
+          <div class="component2__card--top">
+            <span class="component2__card--top-text">Page Views</span>
+            <img src="img/icon-facebook.svg" alt="fb" />
+          </div>
+
+          <!--BOTTOM PART-->
+          <div class="component2__card--bot">
+            <span class="component2__card--bot-number">87</span>
+            <div class="component2__card--bot-persentBox">
+              <img src="img/icon-up.svg" alt="up" />
+              <span class="component2__card--bot-persent">3%</span>
+            </div>
+          </div>
+        </div>
+
+        <!--CARD 2-->
+        <div class="component2__card card-2">
+          <!--TOP PART-->
+          <div class="component2__card--top">
+            <span class="component2__card--top-text">Likes</span>
+            <img src="img/icon-facebook.svg" alt="fb" />
+          </div>
+
+          <!--BOTTOM PART-->
+          <div class="component2__card--bot">
+            <span class="component2__card--bot-number">52</span>
+            <div class="component2__card--bot-persentBox">
+              <img src="img/icon-down.svg" alt="down" />
+              <span
+                class="component2__card--bot-persent"
+                style="color: var(--color-primary-bright-red)"
+                >2%</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!--CARD 3-->
+        <div class="component2__card card-3">
+          <!--TOP PART-->
+          <div class="component2__card--top">
+            <span class="component2__card--top-text">Likes</span>
+            <img src="img/icon-instagram.svg" alt="ig" />
+          </div>
+
+          <!--BOTTOM PART-->
+          <div class="component2__card--bot">
+            <span class="component2__card--bot-number">5462</span>
+            <div class="component2__card--bot-persentBox">
+              <img src="img/icon-up.svg" alt="up" />
+              <span class="component2__card--bot-persent">2257%</span>
+            </div>
+          </div>
+        </div>
+
+        <!--CARD 4-->
+        <div class="component2__card card-4">
+          <!--TOP PART-->
+          <div class="component2__card--top">
+            <span class="component2__card--top-text">Profile Views</span>
+            <img src="img/icon-instagram.svg" alt="ig" />
+          </div>
+
+          <!--BOTTOM PART-->
+          <div class="component2__card--bot">
+            <span class="component2__card--bot-number">52k</span>
+            <div class="component2__card--bot-persentBox">
+              <img src="img/icon-up.svg" alt="up" />
+              <span class="component2__card--bot-persent">1375%</span>
+            </div>
+          </div>
+        </div>
+
+        <!--CARD 5-->
+        <div class="component2__card card-5">
+          <!--TOP PART-->
+          <div class="component2__card--top">
+            <span class="component2__card--top-text">Retweets</span>
+            <img src="img/icon-twitter.svg" alt="tw" />
+          </div>
+
+          <!--BOTTOM PART-->
+          <div class="component2__card--bot">
+            <span class="component2__card--bot-number">117</span>
+            <div class="component2__card--bot-persentBox">
+              <img src="img/icon-up.svg" alt="up" />
+              <span class="component2__card--bot-persent">303%</span>
+            </div>
+          </div>
+        </div>
+
+        <!--CARD 6-->
+        <div class="component2__card card-6">
+          <!--TOP PART-->
+          <div class="component2__card--top">
+            <span class="component2__card--top-text">Likes</span>
+            <img src="img/icon-twitter.svg" alt="tw" />
+          </div>
+
+          <!--BOTTOM PART-->
+          <div class="component2__card--bot">
+            <span class="component2__card--bot-number">507</span>
+            <div class="component2__card--bot-persentBox">
+              <img src="img/icon-up.svg" alt="up" />
+              <span class="component2__card--bot-persent">553%</span>
+            </div>
+          </div>
+        </div>
+
+        <!--CARD 7-->
+        <div class="component2__card card-7">
+          <!--TOP PART-->
+          <div class="component2__card--top">
+            <span class="component2__card--top-text">Likes</span>
+            <img src="img/icon-youtube.svg" alt=yt" />
+          </div>
+
+          <!--BOTTOM PART-->
+          <div class="component2__card--bot">
+            <span class="component2__card--bot-number">107</span>
+            <div class="component2__card--bot-persentBox">
+              <img src="img/icon-down.svg" alt="down" />
+              <span
+                class="component2__card--bot-persent"
+                style="color: var(--color-primary-bright-red)"
+                >19%</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!--CARD 8-->
+        <div class="component2__card card-8">
+          <!--TOP PART-->
+          <div class="component2__card--top">
+            <span class="component2__card--top-text">Total Views</span>
+            <img src="img/icon-youtube.svg" alt=yt" />
+          </div>
+
+          <!--BOTTOM PART-->
+          <div class="component2__card--bot">
+            <span class="component2__card--bot-number">1407</span>
+            <div class="component2__card--bot-persentBox">
+              <img src="img/icon-down.svg" alt="down" />
+              <span
+                class="component2__card--bot-persent"
+                style="color: var(--color-primary-bright-red)"
+                >12%</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

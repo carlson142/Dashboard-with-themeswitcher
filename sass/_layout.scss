@@ -1,0 +1,366 @@
+// TOP PART OF PAGE
+.top {
+  height: 25rem;
+  width: 100%;
+  padding: 3rem 15rem;
+
+  background-color: var(--very-pale-blue);
+
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+
+  display: flex;
+  justify-content: space-between;
+
+  transition: all 0.3s;
+
+  @media (max-width: 950px) {
+    padding: 4rem 2rem;
+    flex-direction: column;
+  }
+
+  &__info {
+    @media (max-width: 950px) {
+      position: relative;
+      &::after {
+        content: "";
+        display: block;
+
+        height: 2px;
+        width: 100%;
+        background-color: var(--color-light-theme-toggle);
+
+        position: absolute;
+        bottom: -3rem;
+      }
+    }
+
+    &--heading {
+      font-size: 3rem;
+      color: var(--very-dark-blue);
+
+      @media (max-width: 950px) {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    &--text {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--dark-grayish-blue);
+    }
+  }
+
+  &__btn {
+    display: flex;
+    height: 2rem;
+
+    @media (max-width: 950px) {
+      transform: translateY(-4rem);
+    }
+
+    &--name {
+      margin-right: 1rem;
+
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--dark-grayish-blue);
+
+      @media (max-width: 950px) {
+        margin-right: auto;
+      }
+    }
+
+    &--input {
+      display: none;
+    }
+
+    &--label {
+      position: relative;
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+    }
+
+    &--toggle {
+      width: 5rem;
+      height: 2.3rem;
+
+      background-color: var(--color-light-theme-toggle);
+
+      border-radius: 2rem;
+
+      transition: all 0.3s;
+
+      &::after {
+        content: "";
+        display: block;
+
+        height: 1.6rem;
+        width: 1.6rem;
+        background-color: var(--very-pale-blue);
+
+        border-radius: 50%;
+
+        position: absolute;
+        top: 2px;
+        left: 3rem;
+
+        transition: all 0.3s;
+      }
+
+      &:hover {
+        background: linear-gradient(
+          to right,
+          hsl(210, 78%, 56%),
+          hsl(146, 68%, 55%)
+        );
+      }
+    }
+  }
+}
+
+//////////////
+// TOGGLING BUTTON
+.top__btn--input:checked ~ .top__btn--label .top__btn--toggle::after {
+  transform: translateX(-2.5rem);
+}
+/////////////
+
+// MAIN COMPONENT
+.component1 {
+  width: 115rem;
+
+  display: grid;
+  grid-template-rows: 24rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+
+  transform: translateY(-12rem);
+
+  @media (max-width: 1200px) {
+    width: 95%;
+  }
+
+  @media (max-width: 950px) {
+    //display: none;
+    width: 100%;
+    grid-template-rows: repeat(4, 20rem);
+    grid-template-columns: 33rem;
+
+    justify-content: center;
+
+    transform: translateY(-5rem);
+  }
+
+  &__card {
+    background-color: var(--light-grayish-blue);
+    border-radius: 0.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 3rem;
+
+    cursor: pointer;
+
+    transition: all 0.3s;
+
+    &:hover {
+      filter: brightness(0.9);
+    }
+
+    &--socials {
+      display: flex;
+      align-items: center;
+
+      .nickname {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--dark-grayish-blue);
+
+        margin-left: 1rem;
+      }
+    }
+
+    &--followers {
+      display: flex;
+      flex-direction: column;
+
+      text-align: center;
+
+      .number {
+        font-size: 6rem;
+        color: var(--very-dark-blue);
+        font-weight: 700;
+      }
+
+      .word {
+        font-size: 1.6rem;
+        color: var(--dark-grayish-blue);
+        text-transform: uppercase;
+        letter-spacing: 4px;
+      }
+    }
+
+    &--today {
+      display: flex;
+      align-items: center;
+
+      .today {
+        color: var(--color-primary-lime-green);
+        font-size: 1.2rem;
+        font-weight: 700;
+
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}
+
+// MIDDLE
+.middle {
+  width: 115rem;
+  transform: translateY(-8rem);
+
+  @media (max-width: 950px) {
+    height: 3rem;
+    width: 100%;
+    transform: translateY(-2rem);
+  }
+
+  &__heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark-grayish-blue);
+  }
+
+  @media (max-width: 1200px) {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+// SECONDARY COMPONENT
+.component2 {
+  transform: translateY(-7rem);
+
+  width: 115rem;
+
+  display: grid;
+  grid-template-rows: repeat(2, 13rem);
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+
+  @media (max-width: 1200px) {
+    width: 95%;
+  }
+
+  @media (max-width: 950px) {
+    grid-template-rows: repeat(8, 12rem);
+    grid-template-columns: 33rem;
+
+    justify-content: center;
+
+    transform: translateY(1rem);
+    height: 116rem;
+  }
+
+  &__card {
+    background-color: var(--light-grayish-blue);
+
+    border-radius: 0.5rem;
+
+    padding: 2rem 3rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    cursor: pointer;
+
+    transition: all 0.3s;
+
+    &:hover {
+      filter: brightness(0.96);
+    }
+
+    &--top {
+      display: flex;
+      justify-content: space-between;
+
+      &-text {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--dark-grayish-blue);
+      }
+    }
+
+    &--bot {
+      display: flex;
+      justify-content: space-between;
+
+      &-number {
+        font-size: 3.5rem;
+        font-weight: 700;
+        color: var(--very-dark-blue);
+
+        line-height: 1;
+      }
+
+      &-persentBox {
+        align-self: flex-end;
+
+        display: flex;
+        align-items: center;
+      }
+
+      &-persent {
+        margin-left: 0.5rem;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--color-primary-lime-green);
+      }
+    }
+  }
+}
+
+// MAIN CARDS TOP BORDER
+.card_1 {
+  border-top: 5px solid var(--color-facebook);
+}
+
+.card_2 {
+  border-top: 5px solid var(--color-twitter);
+}
+
+.card_3 {
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+
+    background: linear-gradient(
+      to right,
+      hsl(37, 97%, 70%),
+      hsl(329, 70%, 58%)
+    );
+
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+}
+
+.card_4 {
+  border-top: 5px solid var(--color-youTube);
+}
